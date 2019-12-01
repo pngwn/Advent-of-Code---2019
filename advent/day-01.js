@@ -25,23 +25,20 @@ import { modules } from "./inputs/day-01";
 
 // inputs in ./inputs/day-01.js
 
-const getMass = n => ~~(n / 3) - 2;
+const get_fuel = n => ~~(n / 3) - 2;
 
-const getTotalMass = modules => modules.reduce((a, m) => a + getMass(m), 0);
+const get_total_fuel = modules => modules.reduce((a, m) => a + get_fuel(m), 0);
 
 // tests
 
 test(`Get fuel for a planets mass`, t => {
-	t.equal(getMass(12), 2, "a mass of 12 requires 2 fuel");
-	t.equal(getMass(14), 2, "a mass of 14 requires 2 fuel");
-	t.equal(getMass(1969), 654, "a mass of 1969 requires 654 fuel");
-	t.equal(getMass(100756), 33583, "a mass of 100756 requires 33583 fuel");
+	t.equal(get_fuel(12), 2, "a mass of 12 requires 2 fuel");
+	t.equal(get_fuel(14), 2, "a mass of 14 requires 2 fuel");
+	t.equal(get_fuel(1969), 654, "a mass of 1969 requires 654 fuel");
+	t.equal(get_fuel(100756), 33583, "a mass of 100756 requires 33583 fuel");
 });
 
-test(`${bgBlue(" The Answer ")}`, t => {
-	t.test("100756 should give 33583", t => {
-		t.equal(getTotalMass(modules), 3273715, "This is the answer");
-	});
+test(`${bgBlue(" The Answer - Part 1 ")}`, t => {
+	const answer = get_total_fuel(modules);
+	t.equal(answer, 3273715, "The answer is: 3273715");
 });
-
-console.log();

@@ -1,6 +1,6 @@
 import { readdirSync } from "fs";
 import { spawn, execSync } from "child_process";
-import { blue, green, red } from "kleur";
+import { blue, green, red, magenta } from "kleur";
 const args = process.argv;
 
 console.clear();
@@ -43,7 +43,7 @@ if (args[2]) {
 
 function run_and_print(day, day_n) {
 	console.log(
-		`\n  ${blue(
+		`\n  ${magenta(
 			`DAY ${day_n}\n  --- ${day_n.toString().length === 1 ? "-" : "--"}`
 		)}`
 	);
@@ -51,4 +51,5 @@ function run_and_print(day, day_n) {
 		stdio: ["ignore", "inherit", "inherit"],
 		shell: true
 	});
+	console.log(magenta("\n************************\n  "));
 }
