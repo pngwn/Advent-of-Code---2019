@@ -10,17 +10,17 @@ Code and tests are in the same file.
 
 You can run the tests for a given day via the command line, tests are how we run the code because i'm lazy:
 
-yarn:
+`yarn`:
 
-```
+```bash
 yarn advent 1
 # or yarn advent day-01
 # or yarn advent day1
 ```
 
-npm:
+`npm`:
 
-```
+```bash
 npm run advent 1
 # or npm run advent day-01
 # or npm run advent day1
@@ -30,14 +30,14 @@ It is really only the number that matters.
 
 You can run the tests for all days by running the command with no arguments.
 
-yarn:
+`yarn`:
 
-```
+```bash
 yarn advent
 ```
 
-npm:
+`npm`:
 
-```
+```bash
 npm run advent
 ```
